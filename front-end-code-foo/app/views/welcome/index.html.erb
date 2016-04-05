@@ -1,0 +1,26 @@
+<div id ="buttons">
+  <button id="articlebutton">Articles</button>
+  <button id="videobutton">Videos</button>
+</div>
+
+<div id = "videolist">
+  <% @http_video_json["data"].each do |video| %>
+  <div class="video" style="background-image: url(<%= video['thumbnail']%>);">
+    <p><%= @http_video_json["data"].index(video) + 1 %></p>
+    <p><%= video["metadata"]["title"] %></p>
+    <p><%= video["metadata"]["longTitle"] %></p>
+    <p><%= video["metadata"]["duration"] %></p></br></br>
+  </div>
+  <% end %>
+</div>
+
+<div id = "articlelist">
+  <% @http_articles_json["data"].each do |article| %>
+  <div class="article" style="background-image: url(<%= article['thumbnail']%>);">
+    <p><%= @http_articles_json["data"].index(article) + 1 %></p>
+    <p><%= article["metadata"]["headline"] %></p>
+    <p><%= article["metadata"]["subHeadline"] %></p>
+    <p><%= article["metadata"]["publishDate"] %></p></br></br>
+  </div>
+  <% end %>
+</div>
