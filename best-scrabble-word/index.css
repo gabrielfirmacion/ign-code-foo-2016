@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     color:white;
+    font-family: Arial-Black;
 }
 
 html {
@@ -22,4 +23,12 @@ body {
 
 img {
   width:2em;
+}
+
+textarea {
+  font-size: 15px;
+}
+
+span {
+  color: #d3222a;
 }
