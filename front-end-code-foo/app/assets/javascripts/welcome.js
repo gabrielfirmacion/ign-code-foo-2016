@@ -28,7 +28,6 @@ var changeBackgroundImage = function(){
     var thisDiv = $(this)[0].id
     var img = $(this)[0].children[0].innerHTML
     $("#"+thisDiv).css({"background-image": 'url(' + img + ')', "color": "white"});
-    console.log(thisDiv)
   });
   $(".child").on("mouseleave",function(){
     var thisDiv = $(this)[0].id

@@ -5,11 +5,11 @@
 <div id = "videolist">
   <% @http_video_json["data"].each do |video| %>
   <div class="video child" id="video<%=@http_video_json["data"].index(video)%>">
-    <p id="image <%=@http_video_json["data"].index(video) %>" style="display:none;"><%= video['thumbnail']%></p>
-    <p><%= @http_video_json["data"].index(video) + 1 %></p>
-    <p><%= video["metadata"]["title"] %></p>
-    <p><%= video["metadata"]["longTitle"] %></p>
-    <p><%= video["metadata"]["duration"] %></p></br></br>
+    <span id="image <%=@http_video_json["data"].index(video) %>" style="display:none;"><%= video['thumbnail']%></span>
+    <span class="left"><%= @http_video_json["data"].index(video) + 1 %></span>
+    <span class="right"><%= video["metadata"]["duration"] %></span>
+    <span><%= video["metadata"]["title"] %></span>
+    <span><%= video["metadata"]["longTitle"] %></span>
   </div>
   <% end %>
 </div>
@@ -17,11 +17,11 @@
 <div id = "articlelist">
   <% @http_articles_json["data"].each do |article| %>
   <div class="article child" id="article<%=@http_articles_json["data"].index(article)%>">
-    <p id="image <%=@http_articles_json["data"].index(article) %>" style="display:none;"><%= article['thumbnail']%></p>
-    <p><%= @http_articles_json["data"].index(article) + 1 %></p>
-    <p><%= article["metadata"]["headline"] %></p>
-    <p><%= article["metadata"]["subHeadline"] %></p>
-    <p><%= article["metadata"]["publishDate"] %></p></br></br>
+    <span id="image <%=@http_articles_json["data"].index(article) %>" style="display:none;"><%= article['thumbnail']%></span>
+    <span class="left"><%= @http_articles_json["data"].index(article) + 1 %></span>
+    <span class="right"><%= article["metadata"]["publishDate"] %></span>
+    <span><%= article["metadata"]["headline"] %></span>
+    <span><%= article["metadata"]["subHeadline"] %></span>
   </div>
   <% end %>
 </div>

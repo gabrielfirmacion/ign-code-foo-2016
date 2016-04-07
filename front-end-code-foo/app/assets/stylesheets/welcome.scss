@@ -5,12 +5,13 @@ body {
     margin: auto;
     min-width: 450px;
     width: 450px;
-    border: 2px solid #73AD21;
-    padding: 10px;
+    border: 2px solid black;
 }
 
 #buttons {
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #buttons span {
@@ -31,4 +32,17 @@ body {
 #buttons #videobutton {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.child {
+  padding-top:25px;
+  padding-bottom:25px;
 }
