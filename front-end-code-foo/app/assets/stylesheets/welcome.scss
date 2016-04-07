@@ -12,6 +12,7 @@ body {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-weight: bold;
 }
 
 #buttons span {
@@ -36,13 +37,35 @@ body {
 
 .left {
   float: left;
+  padding: 0px 10px 10px 10px;
 }
 
 .right {
   float: right;
+  padding-right: 10px;
 }
 
 .child {
   padding-top:25px;
   padding-bottom:25px;
+  border-bottom: 1px solid;
+  border-color: gray;
+}
+
+.gray {
+  color: gray;
+}
+
+.clip {
+  width: 20em;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+.ellipsis {
+  width: 22em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
