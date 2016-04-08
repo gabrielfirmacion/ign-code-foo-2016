@@ -3,9 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     margin: auto;
-    min-width: 450px;
-    width: 450px;
     border: 2px solid black;
+    cursor: pointer;
 }
 
 #buttons {
@@ -93,4 +92,10 @@ body {
   color:gray;
   font-weight:bold;
   font-size: 15px;
+}
+
+@media(min-width:450px) {
+  body {
+    width: 450px;
+  }
 }
