@@ -5,6 +5,10 @@ $( document ).ready(function() {
   changeBackgroundImage();
   formatDate();
   formatTime();
+  formatDivNumber();
+  $('#video9').append("</br><span class='seemore'>SEE MORE VIDEOS</span>")
+  $('#article9').append("</br><span class='seemore'>SEE MORE ARTICLES</span>")
+  showLastTen();
 });
 
 var defaultLoad = function(){
@@ -12,6 +16,7 @@ var defaultLoad = function(){
   $("#articlelist").hide();
   $("#videobutton").css({"background-color": "#d3222a", "color": "white"})
   $("#articlebutton").css({"background-color": "white", "color": "#d3222a"})
+  hideLastTen();
 };
   var showArticles = function(){
     $("#articlebutton").on("click",function(){
@@ -19,7 +24,7 @@ var defaultLoad = function(){
       $("#videolist").hide();
       $("#articlebutton").css({"background-color": "#d3222a", "color": "white"})
       $("#videobutton").css({"background-color": "white", "color": "#d3222a"})
-      console.log("working")
+      hideLastTen();
     })
   };
 
@@ -29,7 +34,7 @@ var defaultLoad = function(){
       $("#articlelist").hide();
       $("#videobutton").css({"background-color": "#d3222a", "color": "white"})
       $("#articlebutton").css({"background-color": "white", "color": "#d3222a"})
-      console.log("working")
+      hideLastTen();
     })
   };
 
@@ -37,7 +42,7 @@ var changeBackgroundImage = function(){
   $(".child").on("mouseenter",function(){
     var thisDiv = $(this)[0].id
     var img = $(this)[0].children[0].innerHTML
-    $("#"+thisDiv).css({"background-image": 'url(' + img + ')', "color": "white"});
+    $("#"+thisDiv).css({"background-image": 'url(' + img + ')',"color": "white"});
   });
   $(".child").on("mouseleave",function(){
     var thisDiv = $(this)[0].id
@@ -63,7 +68,6 @@ var formatDate = function(){
 var formatTime = function(){
   for (i=0; i< $(".time").length; i++){
     var oldFormat = $(".time")[i]
-    console.log(oldFormat.innerHTML)
     if (oldFormat.innerHTML < 60){
       oldFormat.innerHTML = "0"+":"+ oldFormat.innerHTML
     }
@@ -75,3 +79,27 @@ var formatTime = function(){
     }
   }
 }
+
+var formatDivNumber = function(){
+  for (i=0; i< $(".divNumber").length; i++){
+    var oldFormat = $(".divNumber")[i]
+    if (oldFormat.innerHTML < 10){
+      oldFormat.innerHTML = "0"+""+ oldFormat.innerHTML
+    }
+  }
+}
+
+var hideLastTen = function(){
+  $('.video').slice(-10).hide();
+  $('.article').slice(-10).hide();
+   $('.seemore').show();
+}
+
+var showLastTen = function(){
+  $('.seemore').on("click",function(){
+    $('.video').slice(-10).show();
+    $('.article').slice(-10).show();
+    $('.seemore').hide();
+  })
+}
+

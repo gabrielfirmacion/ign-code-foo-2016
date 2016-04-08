@@ -6,7 +6,7 @@
   <% @http_video_json["data"].each do |video| %>
   <div class="video child" id="video<%=@http_video_json["data"].index(video)%>">
     <span id="image <%=@http_video_json["data"].index(video) %>" style="display:none;"><%= video['thumbnail']%></span>
-    <span class="left black"><%= @http_video_json["data"].index(video) + 1 %></span>
+    <span class="left black divNumber"><%= @http_video_json["data"].index(video) + 1 %></span>
     <span class="right gray time"><%= video["metadata"]["duration"] %></span>
     <div class="clip">
       <span class="black"><%= video["metadata"]["title"] %></span>
@@ -22,7 +22,7 @@
   <% @http_articles_json["data"].each do |article| %>
   <div class="article child" id="article<%=@http_articles_json["data"].index(article)%>">
     <span id="image <%=@http_articles_json["data"].index(article) %>" style="display:none;"><%= article['thumbnail']%></span>
-    <span class="left black"><%= @http_articles_json["data"].index(article) + 1 %></span>
+    <span class="left black divNumber"><%= @http_articles_json["data"].index(article) + 1 %></span>
     <span class="right gray date"><%= article["metadata"]["publishDate"] %></span>
     <div class="clip">
       <span class="black"><%= article["metadata"]["headline"] %></span>

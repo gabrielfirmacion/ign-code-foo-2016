@@ -30,9 +30,17 @@ body {
   border-bottom-left-radius: 25px;
 }
 
+#buttons #articlebutton:hover {
+  text-decoration: underline;
+}
+
 #buttons #videobutton {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
+}
+
+#buttons #videobutton:hover {
+  text-decoration: underline;
 }
 
 .left {
@@ -50,6 +58,15 @@ body {
   padding-bottom:25px;
   border-bottom: 1px solid;
   border-color: gray;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all 0.2s;
+}
+
+.child:hover {
+    background-size: 100%;
 }
 
 .gray {
@@ -68,4 +85,12 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.seemore {
+  margin-left: 40px;
+  margin-top: 15px;
+  color:gray;
+  font-weight:bold;
+  font-size: 15px;
 }
